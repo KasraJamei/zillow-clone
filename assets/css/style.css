@@ -31,9 +31,7 @@
 @media (min-width: 1200px) {
     .navbar {
         padding-left: 20rem;
-        /* نزدیک‌تر شدن nav-left به لوگو */
         padding-right: 20rem;
-        /* نزدیک‌تر شدن nav-right به لوگو */
     }
 }
 
@@ -54,7 +52,7 @@
     align-items: center;
     background-color: white;
     border-radius: 0.5rem;
-    width: 450px;
+    width: 460px;
     height: 75px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -81,13 +79,13 @@
 
 
 .search-box .search-btn:hover {
-    background-color: #005bb5;
+    background-color: #ddd;
 }
 
 
 .search-box .search-btn img {
-    width: 24px;
-    height: 24px;
+    width: 75px;
+    height: 75px;
 }
 
 /* start of hero section */
@@ -134,8 +132,8 @@
 }
 
 .hero-overlay .search-bar .search-btn {
-    width: 40px;
-    height: 40px;
+    width: 75px;
+    height: 75px;
     padding: 0;
     border: none;
     background: transparent;
@@ -160,19 +158,14 @@
     margin-top: 5rem;
     display: flex;
     align-items: center;
-    /* وسط چین عمودی */
     justify-content: center;
-    /* وسط چین افقی */
     padding: 2rem;
-    gap: 4rem;
-    /* فاصله بین متن و عکس */
+    gap: 10rem;
 }
 
 .recommendation-text {
-    max-width: 400px;
-    /* حداکثر عرض متن */
+    max-width: 500px;
     text-align: left;
-    /* متن سمت چپ */
 }
 
 .recommendation-text h2 {
@@ -187,17 +180,18 @@
 
 .recommendation-btn {
     padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
+    font-size: 1.1rem;
+    border: 1px solid blue;
+    background-color: transparent;
+    color: blue;
+    font: bold;
     border-radius: 0.5rem;
-    background-color: #0074E4;
-    color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .recommendation-btn:hover {
-    background-color: #005bb5;
+    background-color: #ddd;
 }
 
 .recommendation-images img {
@@ -208,3 +202,102 @@
 }
 
 /* end of recommendation section */
+
+/* start of findhome section */
+
+.findhome {
+    margin-top: 5.5rem;
+    display: flex;
+    align-items: flex-start; /* محتوای بالا به صورت افقی */
+    justify-content: center;
+    padding: 2rem;
+    gap: 3rem; /* فاصله بین چپ و راست */
+}
+
+.findhome-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* تیتر، باکس و دکمه وسط هم در ستون */
+    gap: 1.5rem;
+}
+
+.findhome-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.findhome-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.findhome-box-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.findhome-box-header img {
+    width: 20px;
+    height: 20px;
+}
+
+.findhome-box-content .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.findhome-box-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.findhome-box-content p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.findhome-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    border: 1px solid blue;
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 320px;
+}
+
+.findhome-btn:hover {
+    filter: brightness(85%);
+}
+
+.findhome-images {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.findhome-images img {
+    width: 200px;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* end of findhome section */
