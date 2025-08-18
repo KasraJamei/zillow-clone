@@ -13,18 +13,38 @@
 
     <header id="header-placeholder"></header>
 
-   <section class="hero">
-    <div class="hero-image-wrapper">
-        <img src="assets/images/hero.png" alt="Hero Image">
-        <div class="hero-overlay">
-            <h1>Agents. Tours. Loans. Homes.</h1>
-            <div class="search-bar">
-                <input type="text" placeholder="Enter an address, neighborhood, city, or ZIP code">
-                <button class="search-btn"><img src="assets/images/search.png" alt=""></button>
+    <section class="hero">
+        <div class="hero-image-wrapper">
+            <img class="hero-img" src="assets/images/hero.jpg" alt="Hero Image">
+
+            <div class="hero-overlay">
+                <h1>Agents. Tours.</h1>
+                <h1>Loans. Homes.</h1>
+
+                <form class="search-bar" action="/search" method="get">
+                    <div class="search-box">
+                        <input id="search-input" type="text" name="query"
+                            placeholder="Enter an address, neighborhood, city, or ZIP code" required>
+                        <button type="submit" class="search-btn">
+                            <img src="assets/images/search.png" alt="Search">
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="recommendation">
+        <div class="recommendation-text">
+            <h2>Get home recommendations</h2>
+            <p>Sign in for a more personalized experience.</p>
+            <button class="recommendation-btn">Sign in</button>
+        </div>
+
+        <div class="recommendation-images">
+            <img src="assets/images/house1.jpg" alt="House for sale">
+        </div>
+    </section>
 
     <script src="assets/js/app.js"></script>
 
