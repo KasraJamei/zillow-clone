@@ -3,11 +3,21 @@
     padding: 0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* start of header */
+
 .site-header {
     background: white;
     border-bottom: 1px solid #ddd;
     padding: 0.5rem 2rem;
+    font-size: 1.2rem;
 }
+
+/* start of navbar */
 
 .nav-left,
 .nav-right {
@@ -44,8 +54,54 @@
 
 .navbar a:hover {
     color: #0074E4;
+    cursor: pointer;
 }
 
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0;
+    list-style: none;
+    min-width: 180px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: #f5f5f5;
+    color: #0074E4;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* end of navbar */
+
+/* end of header */
+
+/* start of hero section */
 
 .search-box {
     display: flex;
@@ -87,8 +143,6 @@
     width: 75px;
     height: 75px;
 }
-
-/* start of hero section */
 
 .hero-img {
     width: 100%;
@@ -208,16 +262,16 @@
 .findhome {
     margin-top: 5.5rem;
     display: flex;
-    align-items: flex-start; /* محتوای بالا به صورت افقی */
+    align-items: flex-start;
     justify-content: center;
     padding: 2rem;
-    gap: 3rem; /* فاصله بین چپ و راست */
+    gap: 3rem;
 }
 
 .findhome-left {
     display: flex;
     flex-direction: column;
-    align-items: center; /* تیتر، باکس و دکمه وسط هم در ستون */
+    align-items: center;
     gap: 1.5rem;
 }
 
@@ -247,8 +301,8 @@
 }
 
 .findhome-box-header img {
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 35px;
 }
 
 .findhome-box-content .row {
@@ -290,14 +344,220 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    padding-top: 5rem;
 }
 
-.findhome-images img {
-    width: 200px;
+.findhome-images {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-top: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.property-card {
+    width: 20rem;
+    background: #fff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    flex: 1 1 300px;
+    max-width: 20rem;
+}
+
+.property-image {
+    position: relative;
+}
+
+.property-image img {
+    width: 100%;
     height: auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
 }
 
+.property-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background: #e74c3c;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.25rem 0.6rem;
+    border-radius: 1rem;
+}
+
+.property-info {
+    padding: 1rem;
+}
+
+.skeleton-line {
+    height: 12px;
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 200% 100%;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    animation: shimmer 1.5s infinite;
+}
+
+.skeleton-line.short {
+    width: 70%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .findhome-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .property-card {
+        width: 90%;
+        max-width: 25rem;
+    }
+}
 
 /* end of findhome section */
+
+/* start of services section */
+
+.services {
+    background-color: #f8f7f7be;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    width: 100%;
+    margin-top: 3rem;
+    height: 460px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    flex: 1;
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+.service-card img {
+    max-width: 120px;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.service-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #0066ff;
+    border-radius: 0.5rem;
+    color: #0066ff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.service-btn:hover {
+    background: #0066ff;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .services {
+        flex-direction: row;
+    }
+}
+
+
+/* end of services section */
+
+/* start of footer  */
+
+.site-footer {
+    background-color: #fff;
+    color: #333;
+    padding: 40px;
+    font-size: 14px;
+    line-height: 1.6;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-footer a {
+    color: #006aff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.recommendations {
+    margin-bottom: 30px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.legal {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.apps-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.apps-social a img {
+    width: 70px;
+    height: 50px;
+}
+
+.apps a img,
+.social a img {
+    height: 30px;
+    margin: 0 5px;
+}
+
+/* end of footer */
