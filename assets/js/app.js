@@ -13,3 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('footer-placeholder').innerHTML = data;
     });
 });
+
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+  toggle.addEventListener('click', function () {
+    const parent = this.parentElement;
+    parent.classList.toggle('open');
+
+    const content = this.nextElementSibling;
+    if (parent.classList.contains('open')) {
+      content.style.display = 'block';
+    } else {
+      content.style.display = 'none';
+    }
+  });
+});

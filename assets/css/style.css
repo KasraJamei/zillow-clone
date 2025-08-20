@@ -450,8 +450,8 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     text-align: center;
     flex: 1;
-    margin-left: 7rem;
-    margin-right: 7rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
 }
 
 .service-card img {
@@ -506,12 +506,15 @@ body {
     line-height: 1.6;
     border-top: 1px solid #ddd;
     text-align: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .site-footer a {
-    color: #006aff;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -526,14 +529,19 @@ body {
 .footer-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 30px;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
+
 .links-section {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .legal {
@@ -558,6 +566,25 @@ body {
 .social a img {
     height: 30px;
     margin: 0 5px;
+}
+
+.dropdown-footer {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
 }
 
 /* end of footer */
